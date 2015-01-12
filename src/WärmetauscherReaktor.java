@@ -1,5 +1,5 @@
 
-public class Wärmetauscher {
+public class WärmetauscherReaktor {
 	
 
     public static int wärmeAusgleichen(int warmwasserTemperatur, int kaltwasserTemperatur){
