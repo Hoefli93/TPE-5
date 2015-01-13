@@ -11,7 +11,7 @@ public abstract class Temperatur {
 		return temperatur;
 	}
 
-	public void setTemperature(int temperatur) {
+	public void setTemperatur(int temperatur) {
 		this.temperatur = temperatur;
 	}
 

@@ -21,7 +21,7 @@
 		
 		// wenn die TEmperatur ge�ndert wird wird diese an die Leitwarte weitergeleitet;
 		@Override
-	    public void setTemperature(int temp){
+	    public void setTemperatur(int temp){
 	    
 	    }
 
