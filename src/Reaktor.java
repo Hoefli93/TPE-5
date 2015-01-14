@@ -1,3 +1,5 @@
+
+
 public class Reaktor extends Temperatur implements Runnable {
 
 	int koeffizient = 0;

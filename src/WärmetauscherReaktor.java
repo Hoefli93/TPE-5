@@ -1,3 +1,4 @@
+
 public class WärmetauscherReaktor {
 
 	Kühlkreislauf kreislauf;
@@ -13,7 +14,7 @@ public class WärmetauscherReaktor {
 
 	public void wärmeTauschen() {
 
-		int ergebnis = kreislauf.getWasser(kreislauf.getZeigerA()).getTemperatur() + reaktor.getTemperatur() / 2;
+		int ergebnis = (kreislauf.getWasser(kreislauf.getZeigerA()).getTemperatur() + reaktor.getTemperatur()) / 2;
 		reaktor.setTemperatur(ergebnis);
 		kreislauf.getWasser(kreislauf.getZeigerA()).setTemperatur(ergebnis);
 		lw.flussTempAustausch(ergebnis);

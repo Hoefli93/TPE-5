@@ -1,6 +1,6 @@
 
 public class Kühlkreislauf {
-	private Wasser[] wasserkreislauf = new Wasser[12];
+	private Wasserelement[] wasserkreislauf = new Wasserelement[12];
 	private int zeigerA;
 	private int zeigerB;
 	
@@ -17,7 +17,7 @@ public class Kühlkreislauf {
 	
 	private void befüllen(int temperatur){
 		for (int i = 0; i < wasserkreislauf.length; i++) {
-			wasserkreislauf[i] = new Wasser(temperatur);
+			wasserkreislauf[i] = new Wasserelement(temperatur);
 		}
 	}
 	
@@ -46,7 +46,7 @@ public class Kühlkreislauf {
 		return this.zeigerB;
 	}
 	
-	public Wasser getWasser(int position){
+	public Wasserelement getWasser(int position){
 		return this.wasserkreislauf[position];
 	}
 }

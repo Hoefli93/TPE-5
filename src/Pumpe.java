@@ -1,20 +1,22 @@
 
+
+
 public class Pumpe implements Runnable {
 
 
-	private int performance;
-	private Kühlkreislauf a;
+	private int leistung;
+	private Kühlkreislauf kreislauf;
 	private int wasserGepumpt = 0;
 	private int koeffizient;
 	WärmetauscherFluss tauscherFl;
 	WärmetauscherReaktor tauscherRe;
 	Leitware lw;
 
-	public Pumpe(int performance, Kühlkreislauf kreislauf, int koeffizient,
-			WärmetauscherFluss TauscherFl, WärmetauscherReaktor tauscherRe,
+	public Pumpe(int leistung, Kühlkreislauf kreislauf, int koeffizient,
+			WärmetauscherFluss tauscherFl, WärmetauscherReaktor tauscherRe,
 			Leitware lw) {
-		this.performance = performance;
-		this.a = kreislauf;
+		this.leistung = leistung;
+		this.kreislauf = kreislauf;
 		this.koeffizient = koeffizient;
 		this.tauscherFl = tauscherFl;
 		this.tauscherRe = tauscherRe;
@@ -30,12 +32,12 @@ public class Pumpe implements Runnable {
 
 				try {
 
-					wasserGepumpt += performance;
+					wasserGepumpt = wasserGepumpt + leistung;
 
 					if (wasserGepumpt >= 100) {
-						a.rotieren();
+						kreislauf.rotieren();
 						wärmeAustauschen();
-						wasserGepumpt -= 100;
+						wasserGepumpt = wasserGepumpt - 100;
 					}
 
 					Leitware.LOCK.wait((long) (1000 / koeffizient));
@@ -48,12 +50,12 @@ public class Pumpe implements Runnable {
 
 	}
 
-	public int getPerformance() {
-		return this.performance;
+	public int getLeistung() {
+		return this.leistung;
 	}
 
-	public void setPerformance(int performance) {
-		this.performance = performance;
+	public void setLeistung(int leistung) {
+		this.leistung = leistung;
 	}
 
 	private synchronized void wärmeAustauschen() {
