@@ -1,7 +1,10 @@
+import java.util.concurrent.locks.Lock;
+
 public class WärmetauscherFluss {
 
 	Kühlkreislauf kreislauf;
 	Fluss fluss;
+	private int mittel;
 
 	public WärmetauscherFluss(Kühlkreislauf kreislauf, Fluss fluss) {
 		this.kreislauf = kreislauf;
@@ -16,4 +19,5 @@ public class WärmetauscherFluss {
 		kreislauf.getWasser(kreislauf.getZeigerB()).setTemperatur(ergebnis);
 
 	}
+
 }

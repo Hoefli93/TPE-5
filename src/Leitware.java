@@ -13,13 +13,13 @@ public class Leitware {
 
 	public void start() {
 
-		Reaktor reactor = new Reaktor(RE_START_TEMPERATUR,RE_HITZE_KOEFFIZIENT, this);
-		Fluss river = new Fluss(WASSER_START_TEMPERATUR, this);
-		Kühlkreislauf A = new Kühlkreislauf(WASSER_START_TEMPERATUR);
-		WärmetauscherFluss tauscherFl = new WärmetauscherFluss(A, river);
-		WärmetauscherReaktor tauscherRe = new WärmetauscherReaktor(A, reactor,this);
-		Thread pumpe = new Thread(new Pumpe(PUMPE_GESCHWINDIGKEIT, A,PUMPE_KOEFFIZIENT, tauscherFl, tauscherRe, this));
-		Thread reaktorT = new Thread(reactor);
+		Reaktor reaktor = new Reaktor(RE_START_TEMPERATUR,RE_HITZE_KOEFFIZIENT, this);
+		Fluss fluss = new Fluss(WASSER_START_TEMPERATUR, this);
+		Kühlkreislauf kreislauf = new Kühlkreislauf(WASSER_START_TEMPERATUR);
+		WärmetauscherFluss tauscherFl = new WärmetauscherFluss(kreislauf, fluss);
+		WärmetauscherReaktor tauscherRe = new WärmetauscherReaktor(kreislauf, reaktor,this);
+		Thread pumpe = new Thread(new Pumpe(PUMPE_GESCHWINDIGKEIT, kreislauf,PUMPE_KOEFFIZIENT, tauscherFl, tauscherRe, this));
+		Thread reaktorT = new Thread(reaktor);
 
 		pumpe.start();
 		reaktorT.start();
