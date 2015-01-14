@@ -6,7 +6,7 @@ public class Kühlkreislauf {
 	
 	
 	
-	//Konstruktor
+
 	public Kühlkreislauf(int temperatur){
 		this.zeigerA = 0;
 		this.zeigerB = 6;

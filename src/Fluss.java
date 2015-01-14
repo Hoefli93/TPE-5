@@ -13,8 +13,6 @@ public class Fluss extends Temperatur {
 		return 10;
 	}
 
-	// wenn die TEmperatur ge�ndert wird wird diese an die Leitwarte
-	// weitergeleitet;
 	@Override
 	public void setTemperatur(int temp) {
 

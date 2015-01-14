@@ -55,7 +55,6 @@ public class Leitware {
 	}
 
 	public void printTemperatur() {
-		// TODO Auto-generated method stub
 
 	}
 }
