@@ -6,8 +6,13 @@ public class Leitware {
 	private static final int RE_START_TEMPERATUR = 10;
 	private static final int RE_HITZE_KOEFFIZIENT = 222;
 	private static final int WASSER_START_TEMPERATUR = 10;
-	private int flussTemperatur = WASSER_START_TEMPERATUR;
+	private int flussTemp = WASSER_START_TEMPERATUR;
 	private static final int FLUSS_START_TEMPERATUR = 10;
-	private int reaktorTemperatur = RE_START_TEMPERATUR;
+	private int reaktorTemp = RE_START_TEMPERATUR;
 	public static final Object LOCK = new Object();
+	
+	
+	  public void flussTempAustausch(int temperatur) {
+          this.flussTemp = temperatur;
+  }
 }

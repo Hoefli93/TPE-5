@@ -12,11 +12,11 @@ public class WärmetauscherReaktor {
 		this.lw = lw;
 	}
 
-	public static void wärmeAusgleichen(int warmwasserTemperatur,
+	public  void wärmeAusgleichen(int warmwasserTemperatur,
 			int kaltwasserTemperatur) {
 		int ergebnis= ((warmwasserTemperatur + kaltwasserTemperatur) / 2);
-		kreislauf.setTemperature(ergebnis);
-		kreislauf.getWaterelement(kreislauf.getPointerA()).setTemperature(ergebnis);
-		mc.onReactorTempChange(ergebnis);
+		reaktor.setTemperatur(ergebnis);
+		kreislauf.getWasser(kreislauf.getPointerA()).setTemperatur(ergebnis);
+		lw.flussTempAustausch(ergebnis);
 	}
 }

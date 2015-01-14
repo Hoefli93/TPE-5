@@ -15,9 +15,9 @@ public class Kühlkreislauf {
 	
 	
 	
-	private void befüllen(int temperature){
+	private void befüllen(int temperatur){
 		for (int i = 0; i < wasserkreislauf.length; i++) {
-			wasserkreislauf[i] = new Wasser(temperature);
+			wasserkreislauf[i] = new Wasser(temperatur);
 		}
 	}
 	
