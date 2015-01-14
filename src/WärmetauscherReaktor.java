@@ -4,8 +4,7 @@ public class WärmetauscherReaktor {
 	Reaktor reaktor;
 	Leitware lw;
 
-	public WärmetauscherReaktor(Kühlkreislauf kreislauf, Reaktor reaktor,
-			Leitware lw) {
+	public WärmetauscherReaktor(Kühlkreislauf kreislauf, Reaktor reaktor,Leitware lw) {
 
 		this.kreislauf = kreislauf;
 		this.reaktor = reaktor;
@@ -13,8 +12,8 @@ public class WärmetauscherReaktor {
 	}
 
 	public void wärmeTauschen() {
-		
-		int ergebnis = kreislauf.getWasser(kreislauf.getZeigerA()).getTemperatur() + reaktor.getTemperatur() /2;
+
+		int ergebnis = kreislauf.getWasser(kreislauf.getZeigerA()).getTemperatur() + reaktor.getTemperatur() / 2;
 		reaktor.setTemperatur(ergebnis);
 		kreislauf.getWasser(kreislauf.getZeigerA()).setTemperatur(ergebnis);
 		lw.flussTempAustausch(ergebnis);
