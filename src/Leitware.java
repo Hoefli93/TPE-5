@@ -15,4 +15,10 @@ public class Leitware {
 	  public void flussTempAustausch(int temperatur) {
           this.flussTemp = temperatur;
   }
+
+
+	public void printTemperatur() {
+		// TODO Auto-generated method stub
+		
+	}
 }

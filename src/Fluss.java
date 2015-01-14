@@ -1,6 +1,4 @@
-
-
-	public class Fluss extends Temperatur {
+public class Fluss extends Temperatur {
 
 		private Leitware leitware;
 

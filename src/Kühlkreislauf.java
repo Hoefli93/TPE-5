@@ -36,13 +36,13 @@ public class Kühlkreislauf {
 		 }
 	}
 
-	public int getPointerA(){
+	public int getZeigerA(){
 		return this.zeigerA;
 	}
 	
 	
 	
-	public int getPointerB(){
+	public int getZeigerB(){
 		return this.zeigerB;
 	}
 	
