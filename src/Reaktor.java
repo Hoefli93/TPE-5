@@ -1,9 +1,24 @@
 
 
 public class Reaktor extends Temperatur implements Runnable {
+	
+	/**
+	 *
+	 * @author 1331770
+	 * @author 1320733
+	 * @author 1312740
+	 * 
+	 */
 
 	int koeffizient = 0;
 	Leitware lw;
+	
+	/**
+	 * Konstruktor 
+	 *
+	 * @param temperatur, koeffizient, lw
+	 *            
+	 */
 
 	public Reaktor(int temperatur, int koeffizient, Leitware lw) {
 		super(temperatur);
@@ -11,6 +26,11 @@ public class Reaktor extends Temperatur implements Runnable {
 		this.lw = lw;
 	}
 
+	/**
+	 * Thread run, Reaktor wird gestartet
+	 *          
+	 */
+	
 	@Override
 	public void run() {
 		{

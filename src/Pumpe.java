@@ -1,8 +1,13 @@
 
-
-
 public class Pumpe implements Runnable {
-
+	
+	/**
+	 *
+	 * @author 1331770
+	 * @author 1320733
+	 * @author 1312740
+	 * 
+	 */
 
 	private int leistung;
 	private Kühlkreislauf kreislauf;
@@ -11,6 +16,13 @@ public class Pumpe implements Runnable {
 	WärmetauscherFluss tauscherFl;
 	WärmetauscherReaktor tauscherRe;
 	Leitware lw;
+	
+	/**
+	 * Konstruktor 
+	 *
+	 * @param leistung, kreislauf, koeffizient
+	 *            
+	 */
 
 	public Pumpe(int leistung, Kühlkreislauf kreislauf, int koeffizient,
 			WärmetauscherFluss tauscherFl, WärmetauscherReaktor tauscherRe,
@@ -22,6 +34,11 @@ public class Pumpe implements Runnable {
 		this.tauscherRe = tauscherRe;
 		this.lw = lw;
 	}
+	
+	/**
+	 * Thread run, Pumpe wird gestartet
+	 *          
+	 */
 
 	@Override
 	public void run() {
@@ -61,7 +78,7 @@ public class Pumpe implements Runnable {
 	private synchronized void wärmeAustauschen() {
 		tauscherFl.wärmeTauschen();
 		tauscherRe.wärmeTauschen();
-		lw.printTemperatur();
+		lw.druckTemperatur();
 	}
 
 }

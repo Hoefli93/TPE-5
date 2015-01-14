@@ -1,6 +1,13 @@
 
 public class Leitware {
-
+	
+	/**
+	 *
+	 * @author 1331770
+	 * @author 1320733
+	 * @author 1312740
+	 * 
+	 */
 	private static final int PUMPE_GESCHWINDIGKEIT = 100; 
 	private static final int PUMPE_KOEFFIZIENT = 1; 
 	private static final int RE_KRITISCHE_TEMPERATUR = 2878;
@@ -40,17 +47,31 @@ public class Leitware {
 
 	}
 
+	/**
+	 * druckTemperatur, gibt für Simulation aus
+	 *         
+	 */
 
-	public void printTemperatur() {
+	public void druckTemperatur() {
 
 		System.out.println("Temperatur Reaktor :" + reaktorTemp
 				+ ", Temperatur Rueckfluss in Rhein: " + flussTemp);
 	}
 
+	/**
+	 * reaktorTempAustausch, tauscht Temperatur
+	 *         
+	 */
+	
 	public void reaktorTempAustausch(int temperatur) {
 		this.reaktorTemp = temperatur;
 	}
 
+	/**
+	 * flussTempAustausch, tauscht Temperatur
+	 *         
+	 */
+	
 	public void flussTempAustausch(int temperatur) {
 		this.flussTemp = temperatur;
 	}
